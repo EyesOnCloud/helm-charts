@@ -2,7 +2,7 @@ apiVersion: v2
 appVersion: 6.8.3-apache
 dependencies:
 - condition: mariadb.enabled
-  name: mariadb
+  name: wordpress
   repository: https://eyesoncloud.github.io/helm-charts
   version: 0.3.14
 description: A Helm chart for Wordpress on Kubernetes
