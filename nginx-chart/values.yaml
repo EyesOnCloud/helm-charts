@@ -1,0 +1,24 @@
+# values.yaml
+env: dev  # Default environment: dev | qa | prod
+
+# Nginx configurations per environment
+nginx:
+  dev:
+    replicas: 1
+    configMapData: "Welcome to Dev Environment!"
+    servicePort: 8080
+    serviceType: NodePort
+    nodePort: 30080
+  qa:
+    replicas: 2
+    configMapData: "Welcome to QA Environment!"
+    servicePort: 8081
+    serviceType: NodePort
+    nodePort: 30081
+  prod:
+    replicas: 3
+    configMapData: "Welcome to Production!"
+    servicePort: 80
+    serviceType: NodePort
+    nodePort: 30080
+

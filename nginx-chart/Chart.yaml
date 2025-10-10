@@ -1,0 +1,7 @@
+apiVersion: v2
+appVersion: "1.21"
+description: Helm chart for nginx deployment
+name: nginx-chart
+version: 1.0.0
+maintainers:
+  - name: eyesoncloud

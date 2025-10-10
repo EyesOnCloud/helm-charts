@@ -3,7 +3,7 @@ entries:
   mariadb:
   - apiVersion: v2
     appVersion: 10.6.15
-    created: "2025-10-10T12:24:45.602730078+05:30"
+    created: "2025-10-10T15:36:15.862360682+05:30"
     description: A Helm chart for MariaDB on Kubernetes
     digest: 46b05f1556aeea31cf2bf506bb276ad73dd7a2973df3f8b42d90682e81a841a1
     maintainers:
@@ -13,10 +13,22 @@ entries:
     urls:
     - https://eyesoncloud.github.io/helm-charts/mariadb-0.3.14.tgz
     version: 0.3.14
+  nginx-chart:
+  - apiVersion: v2
+    appVersion: "1.21"
+    created: "2025-10-10T15:36:15.862640612+05:30"
+    description: Helm chart for nginx deployment
+    digest: b6d07561da1bd78a55de69326420544b49f3b1c9311717cbc6217df4badc21b6
+    maintainers:
+    - name: eyesoncloud
+    name: nginx-chart
+    urls:
+    - https://eyesoncloud.github.io/helm-charts/nginx-chart-1.0.0.tgz
+    version: 1.0.0
   wordpress:
   - apiVersion: v2
     appVersion: 6.8.3-apache
-    created: "2025-10-10T12:24:45.605709595+05:30"
+    created: "2025-10-10T15:36:15.865880738+05:30"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -31,4 +43,4 @@ entries:
     urls:
     - https://eyesoncloud.github.io/helm-charts/wordpress-0.14.4.tgz
     version: 0.14.4
-generated: "2025-10-10T12:24:45.601210295+05:30"
+generated: "2025-10-10T15:36:15.861468075+05:30"

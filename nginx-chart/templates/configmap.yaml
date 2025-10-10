@@ -1,0 +1,11 @@
+# templates/configmap.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "nginx.configmapname" . }}
+data:
+  index.html: |
+    <html>
+    <h1> {{ index .Values.nginx .Values.env "configMapData" }} </h1>
+    </html>
+

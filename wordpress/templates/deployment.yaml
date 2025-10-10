@@ -39,6 +39,9 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
     spec:
+      securityContext:
+        fsGroup: 33
+
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
@@ -48,10 +51,15 @@ spec:
       securityContext:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      {{- with .Values.extraInitContainers }}
+
       initContainers:
-      {{- toYaml . | nindent 8 }}
-      {{- end }}
+        - name: fix-permissions
+          image: busybox
+          command: ["sh", "-c", "chown -R 33:33 /var/www/html"]
+          volumeMounts:
+            - name: wordpress-vol
+              mountPath: /var/www/html
+
       containers:
         - name: {{ .Chart.Name }}
           {{- with .Values.securityContext }}
@@ -223,3 +231,4 @@ spec:
           emptyDir: {}
         {{- end }}
         {{- end }}
+

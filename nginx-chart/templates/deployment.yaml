@@ -1,0 +1,32 @@
+# templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "nginx.fullname" . }}
+  labels:
+    app: nginx
+    environment: {{ .Values.env }}
+spec:
+  replicas:  {{ index .Values.nginx .Values.env "replicas" }} # Number of replicas based on environment
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+        environment: {{ .Values.env }}
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:latest
+          ports:
+            - containerPort: 80
+          volumeMounts:
+            - name: config-volume
+              mountPath: /usr/share/nginx/html/index.html
+              subPath: index.html
+      volumes:
+        - name: config-volume
+          configMap:
+            name: {{ include "nginx.configmapname" . }}
