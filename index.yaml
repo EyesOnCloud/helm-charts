@@ -1,9 +1,22 @@
 apiVersion: v1
 entries:
+  mariadb:
+  - apiVersion: v2
+    appVersion: 10.6.15
+    created: "2025-10-10T12:19:32.561931904+05:30"
+    description: A Helm chart for MariaDB on Kubernetes
+    digest: 46b05f1556aeea31cf2bf506bb276ad73dd7a2973df3f8b42d90682e81a841a1
+    maintainers:
+    - name: eyesoncloud
+    name: mariadb
+    type: application
+    urls:
+    - https://eyesoncloud.github.io/helm-charts/mariadb-0.3.14.tgz
+    version: 0.3.14
   wordpress:
   - apiVersion: v2
     appVersion: 6.8.3-apache
-    created: "2025-10-10T11:51:05.044453073+05:30"
+    created: "2025-10-10T12:19:32.56674131+05:30"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -18,4 +31,4 @@ entries:
     urls:
     - https://eyesoncloud.github.io/helm-charts/wordpress-0.14.4.tgz
     version: 0.14.4
-generated: "2025-10-10T11:51:05.04162321+05:30"
+generated: "2025-10-10T12:19:32.561059985+05:30"
