@@ -1,0 +1,5 @@
+repositoryID: 802081b6-04e1-49ce-b9da-ddc5173ecc2f
+displayName: EOC Helm Charts
+description: Helm charts maintained by Eyes on Cloud.
+homeURL: https://github.com/eyesoncloud/helm-charts
+type: helm
