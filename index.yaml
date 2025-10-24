@@ -3,7 +3,7 @@ entries:
   internal-app:
   - apiVersion: v2
     appVersion: 1.24.0
-    created: "2025-10-15T10:11:43.34689631+05:30"
+    created: "2025-10-24T10:54:53.634118155+05:30"
     description: A Helm chart for internal microservice
     digest: 28142b477e2ca355f39304d982a8a0e772b7b48b02d5b90d47265a9245d635a0
     name: internal-app
@@ -13,7 +13,7 @@ entries:
   mariadb:
   - apiVersion: v2
     appVersion: 10.6.15
-    created: "2025-10-15T10:11:43.348912721+05:30"
+    created: "2025-10-24T10:54:53.635708202+05:30"
     description: A Helm chart for MariaDB on Kubernetes
     digest: 46b05f1556aeea31cf2bf506bb276ad73dd7a2973df3f8b42d90682e81a841a1
     maintainers:
@@ -26,7 +26,7 @@ entries:
   myapp:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-10-15T10:11:43.350448576+05:30"
+    created: "2025-10-24T10:54:53.636983429+05:30"
     description: A Helm chart for Kubernetes
     digest: 875cfb000634761ef98c97a18f9c285cf2a63e3698bdded8016b59219d8ce757
     name: myapp
@@ -37,7 +37,18 @@ entries:
   nginx-chart:
   - apiVersion: v2
     appVersion: "1.21"
-    created: "2025-10-15T10:11:43.351215101+05:30"
+    created: "2025-10-24T10:54:53.638227158+05:30"
+    description: Helm chart for nginx deployment
+    digest: 4c486a6643b778f3ab884f0496489f4caa9af7781e830bde7ed4f0eeeabd1623
+    maintainers:
+    - name: eyesoncloud
+    name: nginx-chart
+    urls:
+    - https://eyesoncloud.github.io/helm-charts/nginx-chart-2.0.0.tgz
+    version: 2.0.0
+  - apiVersion: v2
+    appVersion: "1.21"
+    created: "2025-10-24T10:54:53.637991047+05:30"
     description: Helm chart for nginx deployment
     digest: b6d07561da1bd78a55de69326420544b49f3b1c9311717cbc6217df4badc21b6
     maintainers:
@@ -49,7 +60,7 @@ entries:
   wordpress:
   - apiVersion: v2
     appVersion: 6.8.3-apache
-    created: "2025-10-15T10:11:43.35849087+05:30"
+    created: "2025-10-24T10:54:53.641444463+05:30"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -64,4 +75,4 @@ entries:
     urls:
     - https://eyesoncloud.github.io/helm-charts/wordpress-0.14.4.tgz
     version: 0.14.4
-generated: "2025-10-15T10:11:43.338770415+05:30"
+generated: "2025-10-24T10:54:53.632872586+05:30"
